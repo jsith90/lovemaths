@@ -35,7 +35,7 @@ function runGame(gameType) {
     } else if (gameType === "subtract") {
         displaySubtractQuestion(num1, num2);
 
-    }else if (gametype === "division") {
+    }else if (gameType === "division") {
         displayDivisionQuestion(num1, num2);
     }else {
         alert(`Unknown game type: ${gameType}`);
@@ -49,7 +49,7 @@ function runGame(gameType) {
  */
 function checkAnswer() {
 
-    let userAnswer = parseInt(document.getElementById('answer-box').value);
+    let userAnswer = parseFloat(document.getElementById('answer-box').value);
     let calculatedAnswer = calculateCorrectAnswer();
     let isCorrect = userAnswer === calculatedAnswer[0];
 
